@@ -11,6 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 public class ViewHolder extends RecyclerView.ViewHolder{
 
     public TextView name;
+    public TextView position;
+    public TextView length;
 
     public MountainViewHolder(@NonNull View itemView) {
         super(itemView);

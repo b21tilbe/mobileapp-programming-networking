@@ -23,11 +23,10 @@ public class MountainAdapter extends RecyclerView.Adapter<ViewHolder>{
     public void onBindViewHolder(@NonNull ViewHolder holder, int number) {
         Mountain mountain = Mountains.get(number);
 
-        holder.name.setText(mountain.getName();
-    }
+        holder.name.setText(mountain.getName());
+        holder.position.setText(mountain.getPosition());
+        holder.height.setText(String.valueOf(mountain.getHeight()));
 
-    public void setLocation(String position){
-        this.position = position;
     }
 
     @Override
