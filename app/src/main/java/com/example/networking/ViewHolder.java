@@ -1,30 +1,20 @@
 package com.example.networking;
 
 import android.view.View;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.view.ActionBarPolicy;
+import androidx.appcompat.view.menu.MenuView;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class ViewHolder {
+public class ViewHolder extends RecyclerView.ViewHolder{
 
-    public class ViewHolder extends ViewHolder.Adapter {
-    
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView title;
+    public TextView name;
 
-        ViewHolder(View itemView) {
-            super(itemView);
-            itemView.setOnClickListener(this);
-            title = itemView.findViewById(R.id.title);
-        }
+    public MountainViewHolder(@NonNull View itemView) {
+        super(itemView);
 
-        @Override
-        public void onClick(View view) {
-            ActionBarPolicy items;
-            onClickListener.onClick(items.get(getAdapterPosition()));
-        }
+        name = itemView.findViewById(R.id.mountainName);
     }
-
-        public class Adapter {
-        }
-    }
+}
