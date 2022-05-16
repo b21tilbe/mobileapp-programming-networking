@@ -10,8 +10,8 @@ public class MountainAdapter extends RecyclerView.Adapter {
 
     @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new RecyclerView.ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_item, parent, false)
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new RecyclerView.ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_item, parent, false));
     }
 
     @Override
@@ -23,5 +23,7 @@ public class MountainAdapter extends RecyclerView.Adapter {
     public int getItemCount() {
         return 0;
     };
+
+
 }
 
