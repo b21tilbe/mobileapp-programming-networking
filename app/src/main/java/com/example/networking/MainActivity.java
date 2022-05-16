@@ -7,13 +7,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 @SuppressWarnings("FieldCanBeLocal")
 public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener {
 
-    private final String JSON_URL = "HTTPS_URL_TO_JSON_DATA_CHANGE_THIS_URL";
-    private final String JSON_FILE = "mountains.json";
+    private final String JSON_URL = "https://mobprog.webug.se/json-api?Login=brom";
+    //private final String JSON_FILE = "mountains.json";
 
     RecyclerView recyclerView;
+    private List<Mountain> mountainsList;
+    private MountainAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,16 +25,10 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         setContentView(R.layout.activity_main);
 
         recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(adapter);
 
-        LinearLayoutManager linearLayoutManager;
-        linearLayoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(linearLayoutManager);
-
-        MountainAdapter mountainAdapter;
-        mountainAdapter = new MountainAdapter();
-        recyclerView.setAdapter(mountainAdapter);
-
-        new JsonFile(this, this).execute(JSON_FILE);
+        new JsonFile(this, this).execute(JSON_URL);
     }
 
     @Override
