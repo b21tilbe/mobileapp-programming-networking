@@ -6,17 +6,17 @@ public class Mountain {
 
     String name;
     String position;
-    @SerializedName("size") private int lenght;
+    @SerializedName("size") private int length;
 
-    public String getName(String name){
+    public String getName(){
         return name;
     }
 
-    public String getPosition(String position){
+    public String getPosition(){
         return position;
     }
 
-    public String getLength(String length) {
+    public int getLength() {
         return length;
     }
 
@@ -28,7 +28,7 @@ public class Mountain {
        this.position = position;
     }
 
-    public void setLength(String length) {
+    public void setLength(int length) {
         this.length = length;
     };
 }

@@ -4,8 +4,6 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.view.ActionBarPolicy;
-import androidx.appcompat.view.menu.MenuView;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class ViewHolder extends RecyclerView.ViewHolder{
@@ -14,9 +12,11 @@ public class ViewHolder extends RecyclerView.ViewHolder{
     public TextView position;
     public TextView length;
 
-    public MountainViewHolder(@NonNull View itemView) {
+    public ViewHolder(@NonNull View itemView) {
         super(itemView);
 
         name = itemView.findViewById(R.id.mountainName);
+        position = itemView.findViewById(R.id.position);
+        length = itemView.findViewById(R.id.length);
     }
 }
