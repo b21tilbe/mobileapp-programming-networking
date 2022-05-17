@@ -33,7 +33,7 @@ Nedan kan vi även se ett exempel på hur jag har lagt till array för att sedan
         adapter.notifyDataSetChanged();
     }
 
-``
+``` 
 
 Bild på resultatet kan bli funnen nedan:
 
