@@ -11,7 +11,7 @@ import java.util.List;
 
 public class MountainAdapter extends RecyclerView.Adapter<ViewHolder>{
 
-    private List<Mountain>Mountains = new ArrayList();
+    private List<Mountain> Mountains = new ArrayList();
 
     @NonNull
     @Override
@@ -25,15 +25,19 @@ public class MountainAdapter extends RecyclerView.Adapter<ViewHolder>{
 
         holder.name.setText(mountain.getName());
         holder.position.setText(mountain.getPosition());
-        holder.length.setText(String.valueOf(mountain.getPosition()));
+        holder.length.setText(String.valueOf(mountain.getLength()));
 
 
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return Mountains.size();
     };
+
+    public void fetchMountain(List<Mountain> mountains) {
+        this.Mountains = mountains;
+    }
 
 
 }
